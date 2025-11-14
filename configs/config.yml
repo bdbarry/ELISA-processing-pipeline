@@ -1,0 +1,13 @@
+
+raw_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/PxWHM022519/data/raw"
+processed_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/PxWHM022519/data/processed"
+plate_layout_path: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/protocols/PlateLayout_HM_version.xlsx"
+concentrations:
+  - 250.0
+  - 125.0
+  - 62.5
+  - 31.25
+  - 15.6
+  - 7.8
+  - 3.9
+  - 0.0
