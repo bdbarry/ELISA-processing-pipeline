@@ -14,8 +14,15 @@ process_all_plates <- function(config) {
     # Step 4: 4PL fit
     summary_data <- fit_4pl_curve(summary_data, config$concentrations)
     
-    # Step 5: Write output
+    # Step 5: Write summary output
     out_file <- file.path(config$processed_dir, paste0(plate$px_id, "_", plate$week, "_summary.csv"))
     write_csv(summary_data, out_file)
+
   }
+  
+  summary_df <- load_summary(config)
+
+  print(head(summary_df))
+
+  plot_stdcurve(summary_df)
 }

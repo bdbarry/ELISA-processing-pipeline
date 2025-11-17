@@ -1,8 +1,10 @@
 
-raw_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/PxWHM022519/data/raw"
-processed_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/PxWHM022519/data/processed"
+raw_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/10112025 Px WHM022530/data/raw"
+processed_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/10112025 Px WHM022530/data/processed"
+figs_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/10112025 Px WHM022530/data/processed/figs"
+stdcurve_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/10112025 Px WHM022530/data/processed/stdcurve"
 plate_layout_path: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/protocols/PlateLayout_HM_version.xlsx"
-concentrations:
+std_concentrations:
   - 250.0
   - 125.0
   - 62.5
@@ -11,3 +13,4 @@ concentrations:
   - 7.8
   - 3.9
   - 0.0
+

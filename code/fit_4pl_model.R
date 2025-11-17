@@ -5,7 +5,7 @@ fit_4pl_curve <- function(summary_data, concentrations) {
   group_by(sample) %>%
   summarise(mean_od = mean(zero_norm),
             sd_od = sd(zero_norm)) %>%
-  mutate(conc = config$concentrations)
+  mutate(conc = config$std_concentrations)
 
 print(std_curve)
 str(std_curve$conc)
@@ -17,10 +17,10 @@ str(std_curve$conc)
   summary_data <- summary_data %>%
     mutate(pred_conc = sample_conc[,1])
   
-  summary_data <- summary_data %>%
-    group_by(sample) %>%
-    summarise(mean_conc = mean(pred_conc),
-              sd_conc = sd(pred_conc))
+  #summary_data <- summary_data %>%
+    #group_by(sample) %>%
+    #summarise(mean_conc = mean(pred_conc),
+              #sd_conc = sd(pred_conc))
     
   summary_data
 }
