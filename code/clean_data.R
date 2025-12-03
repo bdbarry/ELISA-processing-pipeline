@@ -46,5 +46,4 @@ plate_layout <- pivot_longer(plate_layout,
 clean_data <- full_join(nm450reads, nm570reads, by = c("well", "Row", "column")) %>%
   left_join(plate_layout, by = c("well", "Row", "column"))
   
-  clean_data
 }

@@ -13,7 +13,4 @@ summarise_plate <- function(clean_data, px_id, week) {
   
   summary_data <- summary_data %>%
     mutate(zero_norm = pmax(OD_corrected - bkgd, 0))
-  
-  
-  summary_data
 }

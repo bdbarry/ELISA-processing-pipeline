@@ -1,8 +1,8 @@
 
-raw_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/10112025 Px WHM022530/data/raw"
-processed_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/10112025 Px WHM022530/data/processed"
-figs_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/10112025 Px WHM022530/data/processed/figs"
-stdcurve_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/10112025 Px WHM022530/data/processed/stdcurve"
+raw_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/PxWHM022530/data/raw"
+processed_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/PxWHM022530/data/processed"
+figs_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/PxWHM022530/data/processed/figs"
+stdcurve_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/PxWHM022530/data/processed/stdcurve"
 plate_layout_path: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/protocols/PlateLayout_HM_version.xlsx"
 std_concentrations:
   - 250.0
