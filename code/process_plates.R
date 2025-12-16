@@ -32,4 +32,7 @@ process_all_plates <- function(config) {
 
   #merge all date into one file
   summary_df <- summarise_data(config)
+
+  #plot figures
+  
 }
