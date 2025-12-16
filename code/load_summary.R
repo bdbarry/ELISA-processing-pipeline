@@ -1,5 +1,6 @@
 load_summary <- function(config){
-    files <- list.files(config$processed_dir, pattern = "\\.csv$", full.names = TRUE)
+    files <- list.files(config$main, pattern = "^Px[0-9]+_wk[0-9]+_summary+\\.csv$", full.names = TRUE)
+    files <- files[grep("data/processed/", files)]
     summary_data <- list()
     
     for(file_path in files){

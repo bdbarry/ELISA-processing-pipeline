@@ -1,5 +1,9 @@
 process_all_plates <- function(config) {
-  files <- list.files(config$raw_dir, pattern = "\\.csv$", full.names = TRUE)
+  files <- list.files(config$main_dir,
+   pattern = "\\.csv$",
+   recursive = TRUE,
+   full.names = TRUE)
+  files <- files[grep("data/raw", files)]
   
   for (file_path in files) {
     # load data
@@ -25,4 +29,7 @@ process_all_plates <- function(config) {
 
   # return the data for std curves
   plot_stdcurve(summary_df)
+
+  #merge all date into one file
+  summary_df <- summarise_data(config)
 }

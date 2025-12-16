@@ -1,8 +1,9 @@
 
-raw_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/PxWHM022530/data/raw"
-processed_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/PxWHM022530/data/processed"
-figs_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/PxWHM022530/data/processed/figs"
-stdcurve_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/PxWHM022530/data/processed/stdcurve"
+main_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/Px_data"
+raw_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/Px_data/PxWHM022530/data/raw"
+processed_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/Px_data/PxWHM022530/data/processed"
+figs_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/Px_data/PxWHM022530/data/processed/figs"
+stdcurve_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/Px_data/PxWHM022530/data/processed/stdcurve"
 plate_layout_path: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/protocols/PlateLayout_HM_version.xlsx"
 std_concentrations:
   - 250.0
@@ -13,4 +14,38 @@ std_concentrations:
   - 7.8
   - 3.9
   - 0.0
+diltution_factor: 15
+#create a lookup table for pam
+pam: 
+  - "Pam_1"
+  - "Pam_2"
+  - "Pam_3"
+  - "Pam_4"
+  - "Pam_5"
+  - "Pam_6"
+  - "Pam_7"
+  - "Pam_8"
+  - "Pam_9"
+  - "Pam_10"
+  - "Pam_11"
 
+pam_conc:
+  - 0.0125
+  - 0.025
+  - 0.05
+  - 0.1
+  - 1.0
+  - 5.0
+  - 10.0
+  - 50.0
+  - 100.0
+  - 500.0
+  - 1000.0
+
+# create a lookup table for LPS
+LPS:
+- LPS_1"
+- "LPS_2"
+-  "LPS_3",  "LPS_4",  "LPS_5",  "LPS_6",  "LPS_7",  "LPS_8",  "LPS_9",  "LPS_10")
+LPS_conc <- c(0.0125, 0.025, 0.05, 0.1, 1, 10, 100, 1000, 5000, 10000)
+LPS_lookup <- tibble(sample = LPS, conc = LPS_conc)
