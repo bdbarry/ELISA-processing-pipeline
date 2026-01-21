@@ -14,3 +14,5 @@ sapply(scripts, source)
 
 # 4. Run main pipeline
 process_all_plates(config)
+
+participant_QC(config)
