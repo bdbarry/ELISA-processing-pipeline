@@ -1,5 +1,5 @@
 
-fit_4pl_curve <- function(summary_data, concentrations) {
+fit_4pl_model <- function(summary_data, concentrations) {
 
 #create a dataframe containting the avg for each of the std's
   std_curve <- summary_data %>%

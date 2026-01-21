@@ -1,4 +1,4 @@
-read_plate <- function(file_path, plate_layout_path) {
+load_raw_data <- function(file_path, plate_layout_path) {
   filename <- basename(file_path)
   px_id <- str_extract(filename, "^[^_]+")
   week <- str_extract(filename, "(?<=_)wk[0-9]+")

@@ -1,10 +1,9 @@
 
-main_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/Px_data"
-raw_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/Px_data/PxWHM022530/data/raw"
-processed_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/Px_data/PxWHM022530/data/processed"
-figs_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/Px_data/PxWHM022530/data/processed/figs"
-stdcurve_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/Px_data/PxWHM022530/data/processed/stdcurve"
-plate_layout_path: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/protocols/PlateLayout_HM_version.xlsx"
+raw_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/Px_data/IL1B_ELISA/raw"
+#figs_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/Px_data/PxWHM012540_rerun/data/processed/figs"
+#stdcurve_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/Px_data/PxWHM012540_rerun/data/processed/stdcurve"
+plate_layout_path: '/Users/benbarry/Library/CloudStorage/Box-Box/endochill/protocols/IL-1B Elisa/PlateLayout_HM_version.xlsx'
+summary_data_dir: "/Users/benbarry/Library/CloudStorage/Box-Box/endochill/Px_data/IL1B_ELISA/processed"
 std_concentrations:
   - 250.0
   - 125.0
