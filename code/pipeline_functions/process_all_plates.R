@@ -1,8 +1,8 @@
-process_all_plates <- function(config) {
-files <- get_raw_filepaths(config$raw_dir)
+process_all_plates <- function(raw_dir, plate_layout_path) {
+files <- get_raw_filepaths(raw_dir)
   for (file_path in files) {
     # load data
-    plate <- load_raw_data(file_path, config$plate_layout_path)
+    plate <- load_raw_data(file_path, plate_layout_path)
     
     # transform and normalise data
     clean_plate_data <- clean_plate_data(plate$raw_data, plate$plate_layout)
@@ -18,18 +18,5 @@ files <- get_raw_filepaths(config$raw_dir)
     processed_file <- file.path(processed_folder, paste0(plate$px_id, "_", plate$week, "_summary.csv"))
     write_csv(interpolated_plate_data, processed_file)
   }
-  
-  # return compiled data for all timepoints
-  #summary_df <- load_summary_data(config$raw_dir)
-  #summary_df <- combine_all_data(summary_df)
-  #writeout_summary_data(summary_df)
-
-  # return the data for std curves
-  #plot_stdcurve(summary_df)
-
-  #merge all date into one file
-  #summary_df <- summarise_data(config)
-
-  #plot figures
   
 }
