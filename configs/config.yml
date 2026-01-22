@@ -13,7 +13,7 @@ std_concentrations:
   - 7.8
   - 3.9
   - 0.0
-diltution_factor: 15
+dilution_factor: 15
 #create a lookup table for pam and LPS
 pam_lookup:
   - name: "Pam_1"

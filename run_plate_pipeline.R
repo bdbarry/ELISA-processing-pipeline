@@ -13,7 +13,10 @@ scripts <- list.files(here("code"), pattern = "\\.R$", recursive = TRUE, full.na
 sapply(scripts, source)
 
 # 4. Run main pipeline
-process_all_plates(config)
+process_all_plates(config$raw_dir, config$plate_layout_path)
 
 # 5. Run QC pipeline
-participant_QC(config)
+participant_QC(config$raw_dir)
+
+#6. Save summary for downstream analysis
+return_full_data_summary(config$raw_dir, config$dilution_factor)

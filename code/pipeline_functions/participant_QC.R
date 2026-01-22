@@ -1,5 +1,5 @@
-participant_QC <- function(config){
-    folders <- load_summary_folders(config$raw_dir)
+participant_QC <- function(raw_dir){
+    folders <- load_summary_folders(raw_dir)
 for(folder in folders) {
    # load data 
   filename <- basename(folder)

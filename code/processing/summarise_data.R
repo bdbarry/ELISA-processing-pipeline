@@ -1,6 +1,6 @@
-summarise_data <- function(config) {
+summarise_data <- function(raw_dir, dilution_factor) {
 #extract summary data. 
-file_paths <- list.files(basedir,
+file_paths <- list.files(raw_dir,
            pattern = "^Px[0-9]+_wk[0-9]+_summary\\.csv$",
            recursive = TRUE,
            full.names = TRUE)
@@ -21,17 +21,19 @@ summary_data <- bind_rows(summary_data, .id = "source") %>%
 
 #correct the predicted conc.
 summary_data <- summary_data %>%
-  mutate(pred_conc = case_when(is.na(pred_conc) ~ 0,
-         .default = pred_conc)) %>%
-  mutate(pred_conc = case_when(
-    grepl("LPS", sample) ~ config$dilution_factor * pred_conc,
-    .default = pred_conc)
-    ) 
+  mutate(
+    pred_conc = if_else(is.nan(pred_conc), 0, pred_conc),
+    pred_conc = if_else(
+      grepl("LPS", sample),
+      dilution_factor * pred_conc,
+      pred_conc
+    )
+  )
 
 # calculate the mean and SD
-mean_data <- summary_data %>%
-  group_by(px_id, ,sample, week) %>%
-  summarise(mean_IL1B = mean(pred_conc),
-            IL1B_sd = sd(pred_conc)) 
+#mean_data <- summary_data %>%
+  #group_by(px_id, ,sample, week) %>%
+  #summarise(mean_IL1B = mean(pred_conc),
+   #         IL1B_sd = sd(pred_conc)) 
 
 }
